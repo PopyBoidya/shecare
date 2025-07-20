@@ -1,5 +1,37 @@
+import Swal from "sweetalert2";
+import useAuthContext from "../../Hooks/useAuthContext";
+import { Link } from "react-router-dom";
 
 const Forget = () => {
+
+  const {forgotPassword}= useAuthContext();
+
+  const forgetPass=(e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    forgotPassword(email)
+      .then(() => {
+        Swal.fire({
+          title: "Success!",
+          text: "Password reset email sent successfully.",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+        e.target.reset();
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Error!",
+          text: error.message,
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+      });
+  };
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -24,7 +56,7 @@ const Forget = () => {
 
         {/* Reset Password Form */}
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-          <form className="space-y-6">
+          <form onSubmit={forgetPass} className="space-y-6">
             {/* email Field */}
             <div>
               <label htmlFor="new-password" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -79,9 +111,9 @@ const Forget = () => {
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-500">
             Remember your password?{" "}
-            <a href="/" className="font-semibold hover:underline" style={{ color: "#ff7144" }}>
+            <Link to='/login' className="font-semibold hover:underline" style={{ color: "#ff7144" }}>
               Back to login
-            </a>
+            </Link>
           </p>
         </div>
       </div>

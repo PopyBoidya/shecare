@@ -13,14 +13,14 @@ const JoinUs = () => {
                 </p>
 
                 <div className="flex justify-center mt-8 gap-4 items-center flex-col md:flex-row flex-wrap">
-                    <Link to="/request-pad">
+                    <Link to="/apply-volunteer">
                         <button className="font-inter text-lg font-semibold text-white hover:text-[#db2777] bg-[#db2777] px-6 py-3 rounded-md border hover:border-[#db2777] hover:bg-white transition-all flex items-center gap-2">
                             <HandHeart size={20} />
                             Become a Volunteer
                         </button>
                     </Link>
 
-                    <Link to="/pad-locations">
+                    <Link to="/learn">
                         <button className="font-inter text-lg font-semibold text-[#db2777] hover:text-white bg-white border border-[#ffffff] px-6 py-3 rounded-md hover:bg-[#db2777] transition-all">
                             Learn More
                         </button>

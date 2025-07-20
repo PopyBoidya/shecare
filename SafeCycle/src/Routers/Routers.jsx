@@ -14,6 +14,8 @@ import AdminHome from "../Page/Admin/Home/AdminHome";
 import List from "../Page/Admin/VolunteerList/List";
 import AdminRegister from "../Page/Admin/AdminRegister/AdminRegister";
 import Settings from "../Page/Admin/Settings/Settings";
+import Forget from "../Log/Forget/Forget";
+import Donation from "../Page/Donation/Donation";
 
 // Define the wait function
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -64,7 +66,14 @@ const Routers = createBrowserRouter([
         ),
       },
 
-
+ {
+    path: "/donation",
+    element: (
+      <Suspense fallback={<LoadingSpinner />}>
+        <Donation />
+      </Suspense>
+    ),
+  },
     ],
   },
   {
@@ -86,6 +95,15 @@ const Routers = createBrowserRouter([
       </Suspense>
     ),
   },
+  {
+    path: "/forgot-password",
+    element: (
+      <Suspense fallback={<LoadingSpinner />}>
+        <Forget />
+      </Suspense>
+    ),
+  },
+ 
   {
     path: "/admin",
     element: (

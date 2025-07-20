@@ -13,9 +13,9 @@ const Hero = () => {
                 <span className="font-inter text-lg font-semibold text-white hover:text-[#db2777] bg-[#db2777] px-6 py-3 rounded-md border hover:border-[#db2777] hover:bg-white transition-all mt-5">Request a Pad</span>
             </button>
             </Link>
-            <Link to="/pad-locations">
+            <Link to="/apply-volunteer">
             <button>
-                <span className="font-inter text-lg font-semibold text-[#db2777] hover:text-white bg-white border border-[#db2777] px-6 py-3 rounded-md hover:bg-[#db2777] transition-all mt-5 ml-4">Check Availability</span>
+                <span className="font-inter text-lg font-semibold text-[#db2777] hover:text-white bg-white border border-[#db2777] px-6 py-3 rounded-md hover:bg-[#db2777] transition-all mt-5 ml-4">Apply for Volunteer </span>
             </button>
             </Link>
            </div>

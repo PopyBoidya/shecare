@@ -50,7 +50,7 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-4 text-[#db2777] font-inter">Get Involved</h3>
               <ul className="space-y-2">
                 <li><Link to="/volunteer" className="text-gray-600 hover:text-[#db2777] font-inter">Apply for Volunteer</Link></li>
-                <li><Link to="/donate" className="text-gray-600 hover:text-[#db2777] font-inter">Donate</Link></li>
+                <li><Link to="/donation" className="text-gray-600 hover:text-[#db2777] font-inter">Donate</Link></li>
                 <li><Link to="/contact" className="text-gray-600 hover:text-[#db2777] font-inter">Contact Us</Link></li>
               </ul>
             </div>
