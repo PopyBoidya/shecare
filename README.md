@@ -30,7 +30,7 @@ SafeCycle is a modern React web application built to ensure a safe and efficient
 
 ---
 
-## 🚀 Installation & Setup Instructions
+## 🚀 Installation & Setup Instructions**
 
 ### 1. Clone the Repository
 
