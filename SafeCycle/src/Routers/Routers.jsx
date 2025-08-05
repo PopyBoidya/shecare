@@ -16,6 +16,7 @@ import AdminRegister from "../Page/Admin/AdminRegister/AdminRegister";
 import Settings from "../Page/Admin/Settings/Settings";
 import Forget from "../Log/Forget/Forget";
 import Donation from "../Page/Donation/Donation";
+import Management from "../Page/Admin/AdminRegister/Managment";
 
 // Define the wait function
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -122,7 +123,7 @@ const Routers = createBrowserRouter([
             <Suspense fallback={<LoadingSpinner />}>
               <AdminHome />
             </Suspense>
-          </PrivetRoutes>
+          // </PrivetRoutes>
         ),
       },
       {
@@ -132,7 +133,7 @@ const Routers = createBrowserRouter([
             <Suspense fallback={<LoadingSpinner />}>
               <List />
             </Suspense>
-          </PrivetRoutes>
+          // </PrivetRoutes>
         ),
       },
       {
@@ -142,7 +143,18 @@ const Routers = createBrowserRouter([
             <Suspense fallback={<LoadingSpinner />}>
               <AdminRegister />
             </Suspense>
-          </PrivetRoutes>
+          // </PrivetRoutes>
+
+        ),
+      },
+      {
+        path: "/admin/admin-list",
+        element: (
+          <PrivetRoutes allowedRoles={["admin"]}>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Management />
+            </Suspense>
+          // </PrivetRoutes>
 
         ),
       },

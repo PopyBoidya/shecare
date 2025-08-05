@@ -21,10 +21,11 @@ const Sidebar = () => {
     const navigate = useNavigate();
 
 
-  const menuItems = [
+const menuItems = [
     { id: 'Dashboard', label: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
-    { id: 'Volunteers', label: 'Volunteers55', icon: UserCheck, path: '/admin/volunteers-list' },
-    { id: 'Users', label: 'Users', icon: Users, path: '/admin/admin-register' },
+    { id: 'Volunteers', label: 'Volunteers', icon: UserCheck, path: '/admin/volunteers-list' },
+    { id: 'Register Admin', label: 'Register Admin', icon: Users, path: '/admin/admin-register' },
+    { id: 'Admin List', label: 'Admin List', icon: Users, path: '/admin/admin-list' },
     { id: 'Settings', label: 'Settings', icon: Settings, path: '/admin/settings' }
   ];
 
